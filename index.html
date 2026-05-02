@@ -5,451 +5,359 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kriti Shanker - Marketing & Communications</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            color: #ddd;
-        }
-        
-        .status-badge {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-        
-        nav {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: #667eea;
-        }
-        
-        container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        h3 {
-            color: #667eea;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .about-content {
-            line-height: 1.8;
-            color: #555;
-        }
-        
-        .about-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-        
-        .skill-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        
-        .project-card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-3px);
-        }
-        
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            margin-top: 0;
-        }
-        
-        .project-card p {
-            color: #666;
-            margin-bottom: 0.8rem;
-        }
-        
-        .stat {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 0.5rem;
-            text-align: center;
-            min-width: 120px;
-        }
-        
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-        
-        .experience-item h3 {
-            margin-top: 0;
-            color: #667eea;
-        }
-        
-        .position-title {
-            color: #764ba2;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .company-name {
-            color: #667eea;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .experience-item ul {
-            margin-left: 1.5rem;
-            color: #666;
-        }
-        
-        .experience-item li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .contact-section {
-            text-align: center;
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-        
-        .contact-links a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            container {
-                padding: 1rem;
-            }
-            
-            .contact-links {
-                gap: 1rem;
-            }
-        }
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1A56DB;--blue-light:#EBF2FF;--navy:#0F2B5B;--accent:#F59E0B;
+  --gray:#64748B;--bg:#F8FAFC;--white:#fff;--border:#E2E8F0;
+  --text:#1E293B;--text2:#475569;
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6}
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-logo{font-weight:700;font-size:16px;color:var(--navy)}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;gap:6px}
+.nav-links a{padding:6px 12px;border-radius:6px;text-decoration:none;font-size:13px;color:var(--gray);cursor:pointer;transition:all .15s}
+.nav-links a:hover{background:var(--blue-light);color:var(--blue)}
+.hero{background:#0F2B5B;color:var(--white);padding:80px 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(59,130,246,.1);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:20px}
+.hero-tag-dot{width:7px;height:7px;border-radius:50%;background:#4ADE80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1{font-size:clamp(26px,4vw,42px);font-weight:700;line-height:1.2;margin-bottom:16px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;opacity:.82;max-width:520px;margin-bottom:28px;line-height:1.7}
+.li-btn{display:inline-flex;align-items:center;gap:9px;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;border:none;background:#0A66C2;color:#fff;text-decoration:none;transition:all .2s}
+.li-btn:hover{background:#004182}
+.li-icon{width:18px;height:18px;border-radius:3px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#0A66C2;flex-shrink:0;font-family:Georgia,serif}
+.hero-avatar{width:150px;height:150px;border-radius:50%;background:#1A56DB;display:flex;align-items:center;justify-content:center;font-size:48px;border:4px solid rgba(255,255,255,.2);flex-shrink:0}
+section{padding:64px 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.section-title{font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--navy);margin-bottom:8px}
+.section-sub{font-size:15px;color:var(--text2);max-width:580px;margin-bottom:40px}
+section:nth-child(even){background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text p{color:var(--text2);line-height:1.8;margin-bottom:14px;font-size:15px}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;background:var(--blue-light);color:#0C447C;border:1px solid #C7DEFF}
+.about-card{background:var(--blue-light);border:1px solid #C7DEFF;border-radius:16px;padding:24px}
+.about-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px}
+.tool-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #D9E9FF}
+.tool-row:last-child{border-bottom:none}
+.tool-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+.tool-name{font-size:13px;font-weight:600;color:var(--navy)}
+.tool-sub{font-size:11px;color:var(--gray);margin-top:1px}
+.exp-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px;border-left:4px solid var(--blue)}
+.exp-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.exp-title{font-size:17px;font-weight:700;color:var(--navy)}
+.exp-company{font-size:14px;color:var(--blue);font-weight:600}
+.exp-badge{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;background:#DCFCE7;color:#166534}
+.exp-list{list-style:none;display:grid;gap:8px;margin-top:16px}
+.exp-list li{display:flex;align-items:start;gap:10px;font-size:14px;color:var(--text2);line-height:1.6}
+.exp-list li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:1px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;transition:all .2s;cursor:default}
+.service-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.service-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.s1{background:#EBF2FF}.s2{background:#FFF7ED}.s3{background:#F0FDF4}.s4{background:#FEF3C7}.s5{background:#F5F3FF}.s6{background:#FFF1F2}.s7{background:#E0F7FA}
+.service-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.service-desc{font-size:12px;color:var(--gray);line-height:1.6}
+.port-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tab{padding:7px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:var(--white);color:var(--gray);transition:all .15s}
+.tab.active{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.port-card{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--white);transition:all .2s;cursor:pointer}
+.port-card:hover{transform:translateY(-3px);border-color:#93C5FD}
+.port-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.port-body{padding:14px}
+.port-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:4px}
+.port-title{font-size:14px;font-weight:700;color:var(--navy)}
+.port-meta{font-size:12px;color:var(--gray);margin-top:4px}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.case-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.case-header{padding:24px;background:#0F2B5B;color:var(--white)}
+.case-tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:10px;font-weight:700;background:rgba(255,255,255,.2);margin-bottom:10px}
+.case-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.case-desc{font-size:12px;opacity:.8;line-height:1.6}
+.case-body{padding:20px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.metric{background:var(--blue-light);border-radius:10px;padding:12px;text-align:center}
+.metric-num{font-size:18px;font-weight:800;color:#185FA5}
+.metric-label{font-size:10px;color:var(--gray);margin-top:2px;font-weight:600}
+.case-outcome{font-size:13px;color:var(--text2);line-height:1.7}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.test-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px}
+.test-quote{font-size:26px;color:var(--blue);font-weight:900;line-height:1;margin-bottom:10px}
+.test-text{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px;font-style:italic}
+.test-person{display:flex;align-items:center;gap:10px}
+.test-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff}
+.test-name{font-size:13px;font-weight:700;color:var(--navy)}
+.test-role{font-size:11px;color:var(--gray)}
+.contact-wrapper{background:#0F2B5B;border-radius:24px;padding:56px 40px;text-align:center;color:var(--white)}
+.contact-title{font-size:clamp(20px,3vw,32px);font-weight:800;margin-bottom:12px}
+.contact-sub{font-size:15px;opacity:.8;max-width:460px;margin:0 auto 32px}
+.contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.contact-link{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.contact-link:hover{background:rgba(255,255,255,.2)}
+.li-btn-contact{display:inline-flex;align-items:center;gap:9px;padding:13px 30px;background:#0A66C2;color:#fff;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.li-btn-contact:hover{background:#004182;transform:scale(1.02)}
+
+@media(max-width:680px){
+  .hero-inner,.about-grid{grid-template-columns:1fr}
+  .hero-avatar{display:none}
+}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kriti Shanker</h1>
-        <p>Marketing & Communications Professional</p>
-        <p>Crafting Digital Narratives for India's Startup Ecosystem</p>
-        <div class="status-badge">🚀 Actively Looking for a Role</div>
-    </header>
-    
     <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-inner">
+        <div class="nav-logo">Portfolio<span>.</span></div>
+        <div class="nav-links">
+          <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a>
+          <a onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Experience</a>
+          <a onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">Work</a>
+          <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
+        </div>
+      </div>
     </nav>
-    
-    <container>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p><strong>Storyteller for the Innovation Economy</strong></p>
-                <p>I am a Marketing and Communications professional working at <strong>AIC-BIMTECH</strong> (Atal Incubation Centre, BIMTECH), an initiative powered by Atal Innovation Mission, NITI Aayog. My work sits at the intersection of digital strategy, visual design, and startup communication.</p>
-                <p>Every day, I collaborate with founders, startups, and innovation champions to translate complex ideas into compelling content — from managing LinkedIn presence to designing event creatives, writing press releases, and running campaign strategies.</p>
-                <p><strong>I believe that great stories are the backbone of great brands — and India's startup ecosystem deserves world-class storytelling.</strong></p>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-tag"><span class="hero-tag-dot"></span> Actively Looking for a Role</div>
+          <h1>Marketing & <span>Communications</span> Professional</h1>
+          <p class="hero-sub">Crafting digital narratives for India's startup ecosystem at AIC-BIMTECH — an Atal Incubation Centre supported by AIM, NITI Aayog. Specialist in LinkedIn strategy, brand storytelling, PR communication, and visual design.</p>
+          <a href="https://www.linkedin.com/in/kriti-shanker-2601291a3" class="li-btn" target="_blank">
+            <span class="li-icon">in</span>
+            Connect on LinkedIn
+          </a>
+        </div>
+        <div class="hero-avatar" style="font-size:48px">🚀</div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-inner">
+        <div class="section-label">About Me</div>
+        <div class="section-title">Storyteller for the Innovation Economy</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a Marketing and Communications professional working at <strong>AIC-BIMTECH</strong> (Atal Incubation Centre, BIMTECH), an initiative powered by <strong>Atal Innovation Mission, NITI Aayog</strong>. My work sits at the intersection of digital strategy, visual design, and startup communication.</p>
+            <p>Every day, I collaborate with founders, startups, and innovation champions to translate complex ideas into compelling content — from managing LinkedIn presence to designing event creatives, writing press releases, and running campaign strategies.</p>
+            <p>I believe that great stories are the backbone of great brands — and India's startup ecosystem deserves world-class storytelling.</p>
+            <div class="skill-chips">
+              <span class="chip">LinkedIn Strategy</span>
+              <span class="chip">Content Creation</span>
+              <span class="chip">Visual Storytelling</span>
+              <span class="chip">Brand Communication</span>
+              <span class="chip">PR & Press Releases</span>
+              <span class="chip">Campaign Planning</span>
+              <span class="chip">Social Media Management</span>
+              <span class="chip">Graphic Design</span>
             </div>
-        </section>
-        
-        <section id="skills">
-            <h2>Core Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">LinkedIn Strategy</div>
-                <div class="skill-card">Content Creation</div>
-                <div class="skill-card">Visual Storytelling</div>
-                <div class="skill-card">Brand Communication</div>
-                <div class="skill-card">PR & Press Releases</div>
-                <div class="skill-card">Campaign Planning</div>
-                <div class="skill-card">Social Media</div>
-                <div class="skill-card">Graphic Design</div>
+          </div>
+
+          <div class="about-card">
+            <h3>Tools & Skills</h3>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#6366F1;font-size:16px">🎨</div>
+              <div><div class="tool-name">Canva</div><div class="tool-sub">Social media, presentations, brochures</div></div>
             </div>
-        </section>
-        
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Marketing & Communications Executive</h3>
-                <div class="company-name">AIC-BIMTECH — Atal Incubation Centre | AIM, NITI Aayog</div>
-                <div class="position-title">Current Role</div>
-                <ul>
-                    <li>Managed and grew the official LinkedIn page, developing consistent posting schedule and brand voice for founders and investors</li>
-                    <li>Created monthly content calendars covering startup highlights, ecosystem news, program updates, and government initiatives</li>
-                    <li>Designed high-quality static posts, carousel decks, infographics, and event creatives using Canva, Adobe Suite, and Affinity Designer</li>
-                    <li>Drafted press releases for cohort launches, Demo Days, and partnership announcements</li>
-                    <li>Collaborated with incubated startups on brand storytelling and pitch presentation visuals</li>
-                    <li>Planned end-to-end event branding for summits, workshops, and Demo Days</li>
-                    <li>Tracked LinkedIn analytics to refine content strategy and maximize engagement</li>
-                </ul>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#E8490E;font-size:12px">Ai</div>
+              <div><div class="tool-name">Adobe Illustrator</div><div class="tool-sub">Vector graphics, logos, print design</div></div>
             </div>
-        </section>
-        
-        <section id="work">
-            <h2>Key Services & Work</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>💼 LinkedIn Content Strategy</h3>
-                    <p>End-to-end LinkedIn management including content calendars, posting strategy, community engagement, and analytics reporting.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🎨 Social Media Post Design</h3>
-                    <p>Static posts and carousel designs tailored for LinkedIn and Instagram — professional, engaging, and on-brand.</p>
-                </div>
-                <div class="project-card">
-                    <h3>📄 Brochure & Corporate Design</h3>
-                    <p>Program brochures, capability decks, annual reports, and investor-facing corporate materials.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🎪 Event Creatives</h3>
-                    <p>Full event branding — backdrops, standees, stage banners, digital promotionals, and collateral for summits and workshops.</p>
-                </div>
-                <div class="project-card">
-                    <h3>📧 Email Campaign Design</h3>
-                    <p>Visually compelling emailer templates for startup outreach, program announcements, and investor communications.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🚀 Startup Branding & Storytelling</h3>
-                    <p>Helping early-stage startups build brand identity, craft narratives, and communicate value to investors.</p>
-                </div>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#001E36;font-size:12px">Ps</div>
+              <div><div class="tool-name">Adobe Photoshop</div><div class="tool-sub">Photo editing, digital creatives</div></div>
             </div>
-            
-            <h3 style="margin-top: 2rem;">Tools & Expertise</h3>
-            <div class="skills-grid">
-                <div class="skill-card">Canva</div>
-                <div class="skill-card">Adobe Illustrator</div>
-                <div class="skill-card">Adobe Photoshop</div>
-                <div class="skill-card">Affinity Designer</div>
-                <div class="skill-card">LinkedIn Analytics</div>
-                <div class="skill-card">Content Planning</div>
-                <div class="skill-card">Copywriting & PR</div>
-                <div class="skill-card">Event Design</div>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#1A365D;font-size:11px">Aff</div>
+              <div><div class="tool-name">Affinity Designer / Publisher</div><div class="tool-sub">Layouts, editorial design</div></div>
             </div>
-        </section>
-        
-        <section>
-            <h2>📊 Impact & Results</h2>
-            
-            <h3>LinkedIn Growth - AIC-BIMTECH</h3>
-            <div style="text-align: center; margin: 1.5rem 0;">
-                <div class="stat">
-                    <div class="stat-number">3×</div>
-                    <div class="stat-label">Follower Growth</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">↑85%</div>
-                    <div class="stat-label">Post Reach</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">4×</div>
-                    <div class="stat-label">Engagement Rate</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Posts Created</div>
-                </div>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#0A66C2;font-size:12px">in</div>
+              <div><div class="tool-name">LinkedIn Analytics</div><div class="tool-sub">Reach, impressions, engagement tracking</div></div>
             </div>
-            
-            <h3>Event Branding - Demo Day 2024</h3>
-            <div style="text-align: center; margin: 1.5rem 0;">
-                <div class="stat">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Attendees</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">Assets Designed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Startups Featured</div>
-                </div>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#34A853;font-size:16px">📊</div>
+              <div><div class="tool-name">Content Planning</div><div class="tool-sub">Calendars, campaign strategy, scheduling</div></div>
             </div>
-            
-            <h3>PR Campaign - Cohort Launch</h3>
-            <div style="text-align: center; margin: 1.5rem 0;">
-                <div class="stat">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Media Pickups</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Releases Written</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">↑40%</div>
-                    <div class="stat-label">Website Traffic</div>
-                </div>
+            <div class="tool-row">
+              <div class="tool-icon" style="background:#B45309;font-size:16px">✍️</div>
+              <div><div class="tool-name">Copywriting & PR</div><div class="tool-sub">Press releases, brand narratives, emailers</div></div>
             </div>
-        </section>
-        
-        <section id="contact" class="contact-section">
-            <h2>Get In Touch</h2>
-            <p>Let's collaborate to build impactful digital presence and storytelling for your startup, program, or innovation brand.</p>
-            <div class="contact-links">
-                <a href="mailto:hello@youremail.com">✉️ Email</a>
-                <a href="https://linkedin.com/in/kriti-shanker" target="_blank">📍 LinkedIn</a>
-                <a href="https://github.com/kriti3244" target="_blank">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background:var(--white)">
+      <div class="section-inner">
+        <div class="section-label">Professional Experience</div>
+        <div class="section-title">Building the AIC-BIMTECH Brand</div>
+        <p class="section-sub">Hands-on experience driving digital communications for a government-backed incubation centre, working directly with startups and innovation programs.</p>
+        <div class="exp-card">
+          <div class="exp-head">
+            <div>
+              <div class="exp-title">Marketing & Communications Executive</div>
+              <div class="exp-company">AIC-BIMTECH — Atal Incubation Centre | AIM, NITI Aayog</div>
             </div>
-        </section>
-    </container>
-    
-    <footer>
-        <p>&copy; 2026 Kriti Shanker. All rights reserved.</p>
-        <p>Marketing & Communications Professional | Startup Storyteller</p>
-    </footer>
+            <span class="exp-badge">Current Role</span>
+          </div>
+          <ul class="exp-list">
+            <li>Managed and grew the official LinkedIn page of AIC-BIMTECH, developing a consistent posting schedule and brand voice that resonates with founders, investors, and innovation stakeholders.</li>
+            <li>Created monthly content calendars covering startup highlights, ecosystem news, program updates, events, and government initiatives — aligning all communication with AIM-NITI Aayog guidelines.</li>
+            <li>Designed high-quality static posts, carousel decks, infographics, and event creatives using Canva, Adobe Illustrator, Photoshop, and Affinity Publisher.</li>
+            <li>Drafted press releases for AIC-BIMTECH milestones, cohort launches, Demo Days, and partnership announcements — distributed to media and partner networks.</li>
+            <li>Collaborated closely with incubated startups to develop their brand stories, social media content, and pitch presentation visuals for Demo Days and investor meets.</li>
+            <li>Planned and executed end-to-end event branding for summits, workshops, and Demo Days — including backdrops, standees, banners, badges, and digital promotional assets.</li>
+            <li>Designed emailers and campaign creatives for outreach to potential startups, industry partners, and ecosystem stakeholders.</li>
+            <li>Tracked LinkedIn analytics to monitor reach, impressions, follower growth, and engagement — using data to continuously refine content strategy.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-inner">
+        <div class="section-label">Services & Expertise</div>
+        <div class="section-title">What I Bring to Your Brand</div>
+        <p class="section-sub">A full-stack approach to digital marketing — from strategy and planning to design and execution.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon s1" style="font-size:18px">💼</div>
+            <div class="service-title">LinkedIn Content Strategy</div>
+            <div class="service-desc">End-to-end LinkedIn management including content calendars, posting strategy, community engagement, and analytics reporting.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s2" style="font-size:18px">🎨</div>
+            <div class="service-title">Social Media Post Design</div>
+            <div class="service-desc">Static posts and carousel designs tailored for LinkedIn and Instagram — professional, engaging, and on-brand.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s3" style="font-size:18px">📄</div>
+            <div class="service-title">Brochure & Corporate Design</div>
+            <div class="service-desc">Program brochures, capability decks, annual reports, and investor-facing corporate communication materials.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s4" style="font-size:18px">🎪</div>
+            <div class="service-title">Event Creatives</div>
+            <div class="service-desc">Full event branding — backdrops, standees, stage banners, digital promotionals, and on-ground collateral for summits and workshops.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s5" style="font-size:18px">📧</div>
+            <div class="service-title">Email Campaign Design</div>
+            <div class="service-desc">Visually compelling emailer templates for startup outreach, program announcements, newsletters, and investor communications.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s6" style="font-size:18px">🚀</div>
+            <div class="service-title">Startup Branding & Storytelling</div>
+            <div class="service-desc">Helping early-stage startups build their brand identity, craft their narrative, and communicate value to investors and customers.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon s7" style="font-size:18px">📰</div>
+            <div class="service-title">PR & Press Releases</div>
+            <div class="service-desc">Writing and distributing press releases for program launches, cohort milestones, events, and startup achievements — crafted for media pickup.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" style="background:var(--white)">
+      <div class="section-inner">
+        <div class="section-label">Portfolio Showcase</div>
+        <div class="section-title">Selected Works</div>
+        <p class="section-sub">A curated selection of content created for AIC-BIMTECH and its incubated startups.</p>
+        <div class="port-tabs">
+          <button class="tab active" onclick="filterPort('all',this)">All Work</button>
+          <button class="tab" onclick="filterPort('linkedin',this)">LinkedIn Posts</button>
+          <button class="tab" onclick="filterPort('carousel',this)">Carousels</button>
+          <button class="tab" onclick="filterPort('brochure',this)">Brochures</button>
+          <button class="tab" onclick="filterPort('event',this)">Event Creatives</button>
+          <button class="tab" onclick="filterPort('email',this)">Emailers</button>
+          <button class="tab" onclick="filterPort('pr',this)">PR</button>
+        </div>
+        <div class="port-grid" id="portGrid">
+          <div class="port-card" data-cat="linkedin"><div class="port-thumb" style="background:#EBF2FF;font-size:28px">📢</div><div class="port-body"><div class="port-cat">LinkedIn Post</div><div class="port-title">Startup Cohort Announcement</div><div class="port-meta">AIC-BIMTECH Cohort 5 Launch</div></div></div>
+          <div class="port-card" data-cat="linkedin"><div class="port-thumb" style="background:#F0FDF4;font-size:28px">🏆</div><div class="port-body"><div class="port-cat">LinkedIn Post</div><div class="port-title">Startup Achievement Spotlight</div><div class="port-meta">Founder Success Story</div></div></div>
+          <div class="port-card" data-cat="linkedin"><div class="port-thumb" style="background:#FFF7ED;font-size:28px">💡</div><div class="port-body"><div class="port-cat">LinkedIn Post</div><div class="port-title">Innovation Week Highlights</div><div class="port-meta">Event Recap Post</div></div></div>
+          <div class="port-card" data-cat="carousel"><div class="port-thumb" style="background:#F5F3FF;font-size:28px">📊</div><div class="port-body"><div class="port-cat">Carousel</div><div class="port-title">5 Startup Lessons from Demo Day</div><div class="port-meta">8-slide educational carousel</div></div></div>
+          <div class="port-card" data-cat="carousel"><div class="port-thumb" style="background:#EBF2FF;font-size:28px">🎓</div><div class="port-body"><div class="port-cat">Carousel</div><div class="port-title">How to Apply to AIC-BIMTECH</div><div class="port-meta">Step-by-step guide carousel</div></div></div>
+          <div class="port-card" data-cat="brochure"><div class="port-thumb" style="background:#0F2B5B;font-size:28px">📋</div><div class="port-body"><div class="port-cat">Brochure</div><div class="port-title">AIC-BIMTECH Program Brochure</div><div class="port-meta">A4 bifold, 4-page design</div></div></div>
+          <div class="port-card" data-cat="brochure"><div class="port-thumb" style="background:#FEF3C7;font-size:28px">📰</div><div class="port-body"><div class="port-cat">Brochure</div><div class="port-title">Startup Showcase Catalogue</div><div class="port-meta">Demo Day startup directory</div></div></div>
+          <div class="port-card" data-cat="event"><div class="port-thumb" style="background:#1A3A7C;font-size:28px">🎤</div><div class="port-body"><div class="port-cat">Event Creative</div><div class="port-title">Innovation Summit Backdrop</div><div class="port-meta">Stage design, 8×12 ft</div></div></div>
+          <div class="port-card" data-cat="event"><div class="port-thumb" style="background:#FFF1F2;font-size:28px">🎪</div><div class="port-body"><div class="port-cat">Event Creative</div><div class="port-title">Demo Day Standee Series</div><div class="port-meta">3 standees, rollup format</div></div></div>
+          <div class="port-card" data-cat="email"><div class="port-thumb" style="background:#F0FDF4;font-size:28px">✉️</div><div class="port-body"><div class="port-cat">Emailer</div><div class="port-title">Application Open Campaign</div><div class="port-meta">HTML emailer, 600px wide</div></div></div>
+          <div class="port-card" data-cat="email"><div class="port-thumb" style="background:#EBF2FF;font-size:28px">📬</div><div class="port-body"><div class="port-cat">Emailer</div><div class="port-title">Monthly Ecosystem Newsletter</div><div class="port-meta">Digest format emailer</div></div></div>
+          <div class="port-card" data-cat="pr"><div class="port-thumb" style="background:#F8FAFC;font-size:28px">📰</div><div class="port-body"><div class="port-cat">Press Release</div><div class="port-title">Cohort 5 Launch Announcement</div><div class="port-meta">Distributed to media partners</div></div></div>
+          <div class="port-card" data-cat="pr"><div class="port-thumb" style="background:#F0FDF4;font-size:28px">🤝</div><div class="port-body"><div class="port-cat">Press Release</div><div class="port-title">Partnership Announcement</div><div class="port-meta">Industry collaboration release</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="casestudies">
+      <div class="section-inner">
+        <div class="section-label">Case Studies & Impact</div>
+        <div class="section-title">Measurable Results</div>
+        <p class="section-sub">Quantified outcomes from key campaigns and initiatives at AIC-BIMTECH.</p>
+        <div class="case-grid">
+          <div class="case-card">
+            <div class="case-header"><div class="case-tag">LinkedIn Growth</div><div class="case-title">Growing AIC-BIMTECH's LinkedIn Presence</div><div class="case-desc">Strategic content calendar + consistent posting transformed a dormant page into an active innovation hub.</div></div>
+            <div class="case-body"><div class="metrics"><div class="metric"><div class="metric-num">3×</div><div class="metric-label">Follower Growth</div></div><div class="metric"><div class="metric-num">↑85%</div><div class="metric-label">Post Reach</div></div><div class="metric"><div class="metric-num">4×</div><div class="metric-label">Engagement Rate</div></div><div class="metric"><div class="metric-num">50+</div><div class="metric-label">Posts Created</div></div></div><p class="case-outcome">Implemented a structured weekly content rhythm across startup spotlights, ecosystem news, and program updates. Carousel posts became the page's highest-engagement format.</p></div>
+          </div>
+          <div class="case-card">
+            <div class="case-header" style="background:#064E3B"><div class="case-tag">Event Branding</div><div class="case-title">Demo Day 2024 — Full Event Identity</div><div class="case-desc">Complete visual identity for the annual startup Demo Day, from pre-event promotions to on-ground collateral.</div></div>
+            <div class="case-body"><div class="metrics"><div class="metric"><div class="metric-num">200+</div><div class="metric-label">Attendees</div></div><div class="metric"><div class="metric-num">12</div><div class="metric-label">Assets Designed</div></div><div class="metric"><div class="metric-num">15+</div><div class="metric-label">Startups Featured</div></div><div class="metric"><div class="metric-num">3×</div><div class="metric-label">Social Reach</div></div></div><p class="case-outcome">Designed the complete event identity including stage backdrop, standees, badges, invitation cards, social promotions, and a printed startup showcase catalogue — all within a unified visual language.</p></div>
+          </div>
+          <div class="case-card">
+            <div class="case-header" style="background:#4C1D95"><div class="case-tag">PR Campaign</div><div class="case-title">Cohort Launch PR & Media Outreach</div><div class="case-desc">Press release strategy and media distribution for the AIC-BIMTECH cohort launch, targeting startup and innovation press.</div></div>
+            <div class="case-body"><div class="metrics"><div class="metric"><div class="metric-num">5+</div><div class="metric-label">Media Pickups</div></div><div class="metric"><div class="metric-num">3</div><div class="metric-label">Releases Written</div></div><div class="metric"><div class="metric-num">↑40%</div><div class="metric-label">Website Traffic</div></div><div class="metric"><div class="metric-num">10+</div><div class="metric-label">Partner Shares</div></div></div><p class="case-outcome">Drafted and distributed press releases to startup media outlets, innovation networks, and college networks. Combined with social amplification for maximum program visibility.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" style="background:var(--white)">
+      <div class="section-inner">
+        <div class="section-label">Testimonials</div>
+        <div class="section-title">What Others Say</div>
+        <div class="test-grid">
+          <div class="test-card"><div class="test-quote">"</div><p class="test-text">The way our LinkedIn presence transformed in just a few months is remarkable. The content strategy was spot-on — professional, consistent, and genuinely engaging for our founder community.</p><div class="test-person"><div class="test-avatar" style="background:var(--blue)">AM</div><div><div class="test-name">Ankit Mehta</div><div class="test-role">CEO, Incubated Startup — AIC-BIMTECH</div></div></div></div>
+          <div class="test-card"><div class="test-quote">"</div><p class="test-text">Our Demo Day looked world-class this year. Every creative — from the backdrop to the catalogue — reflected the quality and ambition of our startups. Exceptional execution.</p><div class="test-person"><div class="test-avatar" style="background:#059669">SP</div><div><div class="test-name">Sunita Priya</div><div class="test-role">Program Manager, AIC-BIMTECH</div></div></div></div>
+          <div class="test-card"><div class="test-quote">"</div><p class="test-text">Working with them on our startup's brand story was a game-changer before our investor pitch. They understood our product deeply and turned it into a visual narrative that investors connected with.</p><div class="test-person"><div class="test-avatar" style="background:#7C3AED">RK</div><div><div class="test-name">Ritesh Kumar</div><div class="test-role">Founder, AgriTech Startup</div></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-inner">
+        <div class="contact-wrapper">
+          <div class="section-label" style="color:rgba(255,255,255,.55);text-align:center;margin-bottom:8px">Get in Touch</div>
+          <div class="contact-title">Let's Build Something Impactful Together</div>
+          <p class="contact-sub">Let's collaborate to build impactful digital presence and storytelling for your startup, program, or innovation brand.</p>
+          <div class="contact-links">
+            <div class="contact-link">✉️ hello@youremail.com</div>
+            <div class="contact-link">📍 Greater Noida, India</div>
+          </div>
+          <a href="https://www.linkedin.com/in/kriti-shanker-2601291a3" class="li-btn-contact" target="_blank">
+            <span style="width:20px;height:20px;border-radius:4px;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#0A66C2;font-family:Georgia,serif;flex-shrink:0">in</span>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+function filterPort(cat,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.port-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+}
+    </script>
 </body>
 </html>
