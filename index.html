@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kriti Shanker - Portfolio</title>
+    <title>Kriti Shanker - Marketing & Communications</title>
     <style>
         * {
             margin: 0;
@@ -35,6 +35,16 @@
         header p {
             font-size: 1.1rem;
             color: #ddd;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
         
         nav {
@@ -80,9 +90,19 @@
             padding-bottom: 0.5rem;
         }
         
+        h3 {
+            color: #667eea;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
         .about-content {
             line-height: 1.8;
             color: #555;
+        }
+        
+        .about-content p {
+            margin-bottom: 1rem;
         }
         
         .skills-grid {
@@ -108,7 +128,7 @@
         
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
@@ -128,11 +148,69 @@
         .project-card h3 {
             color: #667eea;
             margin-bottom: 0.5rem;
+            margin-top: 0;
         }
         
         .project-card p {
             color: #666;
+            margin-bottom: 0.8rem;
+        }
+        
+        .stat {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-item h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        
+        .position-title {
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company-name {
+            color: #667eea;
+            font-weight: 700;
             margin-bottom: 1rem;
+        }
+        
+        .experience-item ul {
+            margin-left: 1.5rem;
+            color: #666;
+        }
+        
+        .experience-item li {
+            margin-bottom: 0.8rem;
         }
         
         .contact-section {
@@ -192,19 +270,26 @@
             container {
                 padding: 1rem;
             }
+            
+            .contact-links {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Kriti Shanker</h1>
-        <p>Portfolio & Projects Showcase</p>
+        <p>Marketing & Communications Professional</p>
+        <p>Crafting Digital Narratives for India's Startup Ecosystem</p>
+        <div class="status-badge">🚀 Actively Looking for a Role</div>
     </header>
     
     <nav>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
     </nav>
     
@@ -212,59 +297,159 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>Welcome to my portfolio! I'm Kriti Shanker, a passionate developer and creator. This is where I showcase my work, projects, and skills.</p>
-                <p style="margin-top: 1rem;">I'm dedicated to creating innovative solutions and continuously learning new technologies. Feel free to explore my projects and get in touch!</p>
+                <p><strong>Storyteller for the Innovation Economy</strong></p>
+                <p>I am a Marketing and Communications professional working at <strong>AIC-BIMTECH</strong> (Atal Incubation Centre, BIMTECH), an initiative powered by Atal Innovation Mission, NITI Aayog. My work sits at the intersection of digital strategy, visual design, and startup communication.</p>
+                <p>Every day, I collaborate with founders, startups, and innovation champions to translate complex ideas into compelling content — from managing LinkedIn presence to designing event creatives, writing press releases, and running campaign strategies.</p>
+                <p><strong>I believe that great stories are the backbone of great brands — and India's startup ecosystem deserves world-class storytelling.</strong></p>
             </div>
         </section>
         
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Core Skills & Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-card">HTML/CSS</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Web Development</div>
-                <div class="skill-card">Git/GitHub</div>
-                <div class="skill-card">Problem Solving</div>
+                <div class="skill-card">LinkedIn Strategy</div>
+                <div class="skill-card">Content Creation</div>
+                <div class="skill-card">Visual Storytelling</div>
+                <div class="skill-card">Brand Communication</div>
+                <div class="skill-card">PR & Press Releases</div>
+                <div class="skill-card">Campaign Planning</div>
+                <div class="skill-card">Social Media</div>
+                <div class="skill-card">Graphic Design</div>
             </div>
         </section>
         
-        <section id="projects">
-            <h2>Projects</h2>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Marketing & Communications Executive</h3>
+                <div class="company-name">AIC-BIMTECH — Atal Incubation Centre | AIM, NITI Aayog</div>
+                <div class="position-title">Current Role</div>
+                <ul>
+                    <li>Managed and grew the official LinkedIn page, developing consistent posting schedule and brand voice for founders and investors</li>
+                    <li>Created monthly content calendars covering startup highlights, ecosystem news, program updates, and government initiatives</li>
+                    <li>Designed high-quality static posts, carousel decks, infographics, and event creatives using Canva, Adobe Suite, and Affinity Designer</li>
+                    <li>Drafted press releases for cohort launches, Demo Days, and partnership announcements</li>
+                    <li>Collaborated with incubated startups on brand storytelling and pitch presentation visuals</li>
+                    <li>Planned end-to-end event branding for summits, workshops, and Demo Days</li>
+                    <li>Tracked LinkedIn analytics to refine content strategy and maximize engagement</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="work">
+            <h2>Key Services & Work</h2>
+            
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of your first project. Highlight the technologies used and the impact it had.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    <h3>💼 LinkedIn Content Strategy</h3>
+                    <p>End-to-end LinkedIn management including content calendars, posting strategy, community engagement, and analytics reporting.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of your second project. Share what you learned and built.</p>
-                    <p><strong>Technologies:</strong> Python, Git</p>
+                    <h3>🎨 Social Media Post Design</h3>
+                    <p>Static posts and carousel designs tailored for LinkedIn and Instagram — professional, engaging, and on-brand.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Description of your third project. Explain the problem you solved.</p>
-                    <p><strong>Technologies:</strong> Web Development</p>
+                    <h3>📄 Brochure & Corporate Design</h3>
+                    <p>Program brochures, capability decks, annual reports, and investor-facing corporate materials.</p>
+                </div>
+                <div class="project-card">
+                    <h3>🎪 Event Creatives</h3>
+                    <p>Full event branding — backdrops, standees, stage banners, digital promotionals, and collateral for summits and workshops.</p>
+                </div>
+                <div class="project-card">
+                    <h3>📧 Email Campaign Design</h3>
+                    <p>Visually compelling emailer templates for startup outreach, program announcements, and investor communications.</p>
+                </div>
+                <div class="project-card">
+                    <h3>🚀 Startup Branding & Storytelling</h3>
+                    <p>Helping early-stage startups build brand identity, craft narratives, and communicate value to investors.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 2rem;">Tools & Expertise</h3>
+            <div class="skills-grid">
+                <div class="skill-card">Canva</div>
+                <div class="skill-card">Adobe Illustrator</div>
+                <div class="skill-card">Adobe Photoshop</div>
+                <div class="skill-card">Affinity Designer</div>
+                <div class="skill-card">LinkedIn Analytics</div>
+                <div class="skill-card">Content Planning</div>
+                <div class="skill-card">Copywriting & PR</div>
+                <div class="skill-card">Event Design</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>📊 Impact & Results</h2>
+            
+            <h3>LinkedIn Growth - AIC-BIMTECH</h3>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <div class="stat">
+                    <div class="stat-number">3×</div>
+                    <div class="stat-label">Follower Growth</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">↑85%</div>
+                    <div class="stat-label">Post Reach</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4×</div>
+                    <div class="stat-label">Engagement Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Posts Created</div>
+                </div>
+            </div>
+            
+            <h3>Event Branding - Demo Day 2024</h3>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Attendees</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Assets Designed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Startups Featured</div>
+                </div>
+            </div>
+            
+            <h3>PR Campaign - Cohort Launch</h3>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Media Pickups</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Releases Written</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">↑40%</div>
+                    <div class="stat-label">Website Traffic</div>
                 </div>
             </div>
         </section>
         
         <section id="contact" class="contact-section">
             <h2>Get In Touch</h2>
-            <p>I'd love to hear from you! Feel free to reach out via:</p>
+            <p>Let's collaborate to build impactful digital presence and storytelling for your startup, program, or innovation brand.</p>
             <div class="contact-links">
-                <a href="mailto:your.email@example.com">Email</a>
-                <a href="https://github.com/kriti3244" target="_blank">GitHub</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="mailto:hello@youremail.com">✉️ Email</a>
+                <a href="https://linkedin.com/in/kriti-shanker" target="_blank">📍 LinkedIn</a>
+                <a href="https://github.com/kriti3244" target="_blank">💻 GitHub</a>
             </div>
         </section>
     </container>
     
     <footer>
         <p>&copy; 2026 Kriti Shanker. All rights reserved.</p>
-        <p>Built with HTML, CSS & JavaScript</p>
+        <p>Marketing & Communications Professional | Startup Storyteller</p>
     </footer>
 </body>
 </html>
